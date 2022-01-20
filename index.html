@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qdesusct</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p><b>Q</b>uantos <b>d</b>ias <b>e</b>stou <b>s</b>em <b>u</b>sar <b>s</b>eno, <b>c</b>osseno e <b>t</b>angente?</p>
+    <p><span id="count"></span> dias</p>
+    <p>Última vez que eu usei: 19 de janeiro de 2022</p>
+</body>
+
+<script>
+    const data1 = new Date('01/19/2022');
+    const data2 = new Date();
+    const diffTempo = Math.abs(data2 - data1);
+    const diffDias = Math.round(diffTempo / (1000 * 60 * 60 * 24));
+    document.getElementById('count').innerHTML = diffDias;
+</script>
+
+</html>
